@@ -64,7 +64,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a data-toggle="modal" data-target="#loginModal">
+                            <a id="loginBtn">
                                 <span class="glyphicon glyphicon-log-in"></span> Login
                             </a>
                         </li>
@@ -73,7 +73,7 @@
             </div>
         </nav>
 
-        <div id="loginModal" class="modal fade" role="dialog" data-backdrop="static">
+        <div id="loginModal" class="modal fade" role="dialog">
             <div class="modal-dialog" >
                 <div class="modal-content">
                     <div class="modal-header">
@@ -103,7 +103,7 @@
             </div>
         </div>
 
-        <div id="reservetableModal" class="modal fade" role="dialog" data-backdrop="static">
+        <div id="reservetableModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -113,8 +113,8 @@
                     <div class="modal-body">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label class="col-sm-4 control-label">Number of Guests</label>
-                                <div class="col-sm-8">
+                                <label class="col-sm-2 control-label">Number of Guests</label>
+                                <div class="col-sm-10">
                                     <label class="radio-inline">
                                         <input type="radio" name="numberofguests" id="numberofguests1" value="option1"> 1
                                     </label>
@@ -136,31 +136,31 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label">Section</label>
-                                <div class="col-sm-8">
+                                <label class="col-sm-2 control-label">Section</label>
+                                <div class="col-sm-10">
                                     <div class="btn-group" data-toggle="buttons">
                                         <label class="btn btn-success active">
-                                          <input type="radio" name="section" id="nonsmoking" checked> Non-Smoking
+                                            <input type="radio" name="section" id="nonsmoking" checked> Non-Smoking
                                         </label>
                                         <label class="btn btn-danger">
-                                          <input type="radio" name="section" id="smoking"> Smoking
+                                            <input type="radio" name="section" id="smoking"> Smoking
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group has-feedback">
-                                <label class="col-sm-4 control-label">Date and Time</label>
-                                <div class="col-sm-4">
+                                <label class="col-sm-2 control-label">Date and Time</label>
+                                <div class="col-sm-5">
                                     <input class="form-control" type="date" name="date" placeholder="Date"/>
                                     <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-5">
                                     <input class="form-control" type="time" name="time" placeholder="Time"/>
                                     <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-4 col-sm-8">
+                                <div class="col-sm-offset-2 col-sm-8">
                                     <button type="submit" class="btn btn-primary">Reserve</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
                                 </div>
@@ -193,7 +193,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-2">
                         <p style="padding:40px;"></p>
-                        <a href="#reservetable" class="btn btn-block btn-warning" data-toggle="modal" data-target="#reservetableModal" >Reserve Table</a>
+                        <a class="btn btn-block btn-warning" id="reserveTableBtn" >Reserve Table</a>
                     </div>
                 </div>
             </div>
@@ -260,10 +260,10 @@
                         </a>
                         <div class="btn-group" id="carouselButtons">
                             <button class="btn btn-danger btn-xs" id="carousel-pause">
-                                    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
                             </button>
                             <button class="btn btn-danger btn-xs" id="carousel-play">
-                                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                             </button>
                         </div>
                     </div>
@@ -396,12 +396,20 @@
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
         <script>
             $(document).ready(function () {
-               $("#mycarousel").carousel( { interval: 2000 } );
-                $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel({interval: 2000});
+                $("#carousel-pause").click(function () {
                     $("#mycarousel").carousel('pause');
                 });
-                $("#carousel-play").click(function(){
+                $("#carousel-play").click(function () {
                     $("#mycarousel").carousel('cycle');
+                });
+
+                $('#loginBtn').click(function () {
+                    $('#loginModal').modal('toggle');
+                });
+
+                $('#reserveTableBtn').click(function () {
+                    $('#reservetableModal').modal('toggle');
                 });
             });
         </script>
