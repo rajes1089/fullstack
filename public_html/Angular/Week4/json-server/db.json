@@ -65,7 +65,7 @@
       "image": "images/zucchipakoda.png",
       "category": "appetizer",
       "label": "",
-      "price": "1.99",
+      "price": 1.99,
       "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",
       "comments": [
         {
@@ -97,6 +97,12 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "Hellow",
+          "author": "Rajeswaran",
+          "date": "2016-05-23T07:10:33.513Z"
         }
       ]
     },
@@ -227,5 +233,45 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "mychannel": "tel",
+      "firstName": "Rajeswaran",
+      "lastName": "Dhandapani",
+      "agree": true,
+      "email": "rdhandapani@inautix.co.in",
+      "tel": {
+        "areaCode": "615",
+        "number": "3814433"
+      },
+      "comments": "helof",
+      "id": 1
+    },
+    {
+      "mychannel": "Email",
+      "firstName": "Rajes",
+      "lastName": "D",
+      "agree": true,
+      "email": "dfdfdf@d",
+      "tel": {
+        "areaCode": "343434",
+        "number": "3814433"
+      },
+      "comments": "dfdfdfdf",
+      "id": 2
+    },
+    {
+      "mychannel": "Email",
+      "firstName": "Rajeswaran",
+      "lastName": "Dhandapani",
+      "agree": true,
+      "email": "rdhandapani@inautix.co.in",
+      "tel": {
+        "areaCode": "4545",
+        "number": "3814433"
+      },
+      "comments": "ggeeew",
+      "id": 3
+    }
+  ]
 }
